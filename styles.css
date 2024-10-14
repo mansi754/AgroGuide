@@ -3,60 +3,93 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #f7fafc, #edf2f7); /* Subtle background gradient */
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-/* Header with Gradient */
+/* Header Styles */
 header {
-    background: linear-gradient(45deg, #4CAF50, #4dd0e1);
+    background: linear-gradient(90deg, #4CAF50, #38a169); /* Gradient header for a modern look */
     color: white;
-    padding: 15px;
+    padding: 25px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    animation: fadeInDown 1s ease-in-out;
 }
 
-/* Navigation Styles */
+@keyframes fadeInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Navigation Menu */
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: background 0.3s ease-in-out;
 }
 
 nav ul li {
-    font-size: 18px;
-    display: inline-block;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    padding: 10px 15px;
-    transition: color 0.3s, transform 0.3s;
-    font-style: italic;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #FF5722;
-    transform: scale(1.05); /* Hover effect for links */
+    background-color: #4CAF50;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 nav ul li a.active {
     border-bottom: 3px solid #FFD700;
 }
 
-/* Main content area */
+/* Main Content */
 main {
     flex: 1;
+    padding: 40px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Footer */
@@ -64,38 +97,42 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     margin-top: auto;
-}
-
-footer p a {
-    color: white;
-    margin: 0 10px;
-}
-
-footer p a:hover {
-    color: #FF5722;
-    transition: color 0.3s;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Crop Details Section */
 #crop-details {
     width: 80%;
     margin: auto;
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Improved shadow */
+    background: rgba(255, 255, 255, 0.8); /* Glassmorphism */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#crop-details:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 #crop-details h1 {
-    color: #4CAF50;
+    color: #38a169;
     margin-bottom: 20px;
+    font-size: 2em;
+    animation: textGlow 1.5s infinite alternate;
 }
 
-#crop-details h2 {
-    color: #333;
-    margin-top: 20px;
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    }
 }
 
 /* Disease Section */
@@ -108,66 +145,70 @@ footer p a:hover {
     border-left: 5px solid;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.disease-block:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .disease-block h3 {
     margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
 .disease-block p {
     color: #666;
 }
 
-.disease-block:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Hover effect */
-}
-
-/* Image Placeholder */
+/* Image Placeholder Styling */
 .image-space {
     background-color: #e0e0e0;
-    height: 190px;
+    height: 200px;
     width: 100%;
     max-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 2px solid #FFD700;
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
 }
 
 .image-space img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-.image-space:hover {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Crop Category Styles */
+/* Crop Category */
 .crop-category {
     background-color: white;
     border-radius: 15px;
     padding: 30px;
     margin: 20px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow */
-    width: 80%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.crop-category:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.crop-category a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .crop-category h2 {
     color: #4CAF50;
     margin-bottom: 25px;
-}
-
-.crop-category a {
-    text-decoration: none;
+    font-size: 1.8em;
 }
 
 /* Crop Cards */
@@ -179,33 +220,24 @@ footer p a:hover {
 }
 
 .crop-card {
-    background-color: #7fb5fc;
-    border-radius: 10px;
+    background-color: #fff;
+    border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 25%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.crop-card h3 {
-    margin: 0;
-    padding: 5px 0;
-    font-size: 18px;
-    color: #333;
-}
-
 .crop-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Crops Section */
-#crops-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+.crop-card h3 {
+    font-size: 1.4em;
+    margin: 10px 0;
+    color: #333;
 }
 
 /* Weather Card */
@@ -214,34 +246,22 @@ footer p a:hover {
     border-radius: 20px;
     padding: 30px;
     margin: 30px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 85%;
     max-width: 600px;
     position: relative;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
-.weather-card h3 {
-    margin-top: 0;
-    color: #4CAF50;
-    font-size: 24px;
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
-.weather-card p {
-    margin: 10px 0;
-    color: #666;
-    font-size: 16px;
-}
-
-/* Crop Suggestions */
+/* Suggested Crop Section */
 #crop-suggestions {
     margin-top: 20px;
-}
-
-#crop-suggestions h3 {
-    color: #4CAF50;
-    margin-bottom: 15px;
-    font-size: 20px;
 }
 
 .crop-list {
@@ -251,59 +271,46 @@ footer p a:hover {
 
 .crop-list li {
     background-color: #e0f7fa;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 10px 15px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .crop-list li:hover {
     background-color: #b2ebf2;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transform: translateX(10px);
+    cursor: pointer;
 }
 
 .crop-list li strong {
-    color: #333;
-    font-size: 16px;
     margin-right: 5px;
-}
-
-.crop-list li p {
-    margin: 0;
-    color: #666;
-    font-size: 14px;
-    flex-grow: 1;
+    font-size: 1em;
+    color: #333;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .weather-card, #crop-suggestions {
-        width: 100%;
-        padding: 15px;
+    .weather-card, #crop-details {
+        width: 95%;
     }
 
-    .weather-card h3 {
-        font-size: 20px;
-    }
-
-    .weather-card p {
-        font-size: 14px;
-    }
-
-    .crop-list li {
-        padding: 8px 10px;
-        font-size: 14px;
+    nav ul {
+        flex-direction: column;
+        padding: 0;
     }
 
     nav ul li {
-        display: block;
-        text-align: center;
+        margin: 10px 0;
     }
 
     .crop-card {
-        width: 100%;
+        width: 90%;
     }
 }
+
