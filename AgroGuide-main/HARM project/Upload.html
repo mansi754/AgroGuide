@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Plant Disease Photo - AgroGuide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AgroGuide</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="crop.html">Crops</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="upload.html" class="active">Upload Disease Image</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="upload">
+            <h2>Upload a Plant Disease Photo 🌿</h2>
+            <p>Upload a clear picture of your plant’s disease and our AI chatbot will help you with information, prevention, and solutions.</p>
+
+            <!-- Upload form -->
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="file">Choose a file:</label>
+                <input type="file" id="file" name="file" accept="image/*" required><br><br>
+                <input type="submit" value="Upload">
+            </form>
+
+            <div id="chatbot-response">
+                <!-- This is where the chatbot will respond with solutions -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AgroGuide</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
