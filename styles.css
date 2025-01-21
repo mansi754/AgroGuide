@@ -1,0 +1,245 @@
+/* General styling for body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+  width: 100%;
+  background-color: #4CAF50;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  background-color: #e0f7fa;
+  padding: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.hero h2 {
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.cta-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+}
+
+
+/* Crop Category Cards */
+.crop-category {
+  background-color: #eaf4ea;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.crop-card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.crop-card {
+  background-color: #EAF4EA;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.crop-card h3 {
+  margin: 60px 0 10px;
+  font-size: 20px;
+  color: #4CAF50;
+}
+
+.crop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+} /* Suggested Crops Styles */
+#suggested-crops {
+    margin-top: 40px;
+}
+
+.crop-card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.crop-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.crop-card:hover {
+    transform: scale(1.05);
+}
+
+/* Weather Page Styles */
+.weather-card {
+  background: linear-gradient(135deg, #A8E0A6, #77BF6B);
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.forecast-day:hover {
+  transform: scale(1.05);
+}
+
+/* Additional styling for icons */
+.weather-icon {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+
+/* Testimonials */
+.testimonials {
+  background-color: #d8e8d4;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+.testimonial {
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* Styling for upload form */
+#upload {
+  padding: 50px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+#upload h2 {
+  color: #4CAF50;
+}
+
+form {
+  margin: 20px auto;
+  width: 50%;
+}
+
+input[type="file"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
